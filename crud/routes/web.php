@@ -24,3 +24,5 @@ Route::post('/insertfoto', [UlalaController::class, 'insertfoto'])->name('insert
 
 Route::get('/tampilkandatafoto/{id}', [UlalaController::class, 'tampilkandatafoto'])->name('tampilkandatafoto');
 Route::post('/updatedatafoto/{id}', [UlalaController::class, 'updatedatafoto'])->name('updatedatafoto');
+
+Route::get('/deletedatafoto/{id}', [UlalaController::class, 'deletedatafoto'])->name('deletedatafoto');

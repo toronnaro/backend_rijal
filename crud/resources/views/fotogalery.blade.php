@@ -32,15 +32,18 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php
+                        $no = 1;
+                    @endphp
                     @foreach ($data as $row)
                         <tr>
-                            <th scope="row">{{ $row->id }}</th>
+                            <th scope="row">{{ $no++ }}</th>
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->deskripsi }}</td>
                             <td>bruh</td>
                             <td>{{ $row->created_at->format('D M Y') }}</td>
                             <td>
-                                <button type="button" class="btn btn-danger">Hapus</button>
+                                <a href="/deletedatafoto/{{ $row->id }}" class="btn btn-danger">Hapus</a>
                                 <a href="/tampilkandatafoto/{{ $row->id }}" class="btn btn-info">Edit</a>
                             </td>
                         </tr>

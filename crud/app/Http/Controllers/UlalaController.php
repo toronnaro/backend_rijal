@@ -37,4 +37,10 @@ class UlalaController extends Controller
         $data->update($request->all());
         return redirect()->route('foto')->with('Success', 'Foto Anda Telah Di Ubah');
     }
+
+    public function deletedatafoto($id){
+        $data = ulala::find($id);
+        $data->delete();
+        return redirect()->route('foto')->with('Success', 'Foto Anda Telah Di Hapus');
+    }
 }
