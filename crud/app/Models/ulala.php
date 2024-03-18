@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ulala extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+    protected $date = ['created_at'];
 }

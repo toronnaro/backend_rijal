@@ -13,8 +13,13 @@
     <h1 class="text-center mb-4">Galery</h1>
 
     <div class="container">
-        <button type="button" class="btn btn-success">Tambah +</button>
+        <a href="/tambahfoto" class="btn btn-success">Tambah +</a>
         <div class="row">
+            @if ($message = Session::get('Success'))
+                <div class="alert alert-success" role="alert">
+                    {{ $message }}
+                </div>
+            @endif
             <table class="table">
                 <thead>
                     <tr>
@@ -22,6 +27,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Deskripsi</th>
                         <th scope="col">foto</th>
+                        <th scope="col">Dibuat</th>
                         <th scope="col">select</th>
                     </tr>
                 </thead>
@@ -32,6 +38,7 @@
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->deskripsi }}</td>
                             <td>bruh</td>
+                            <td>{{ $row->created_at->format('D M Y') }}</td>
                             <td>
                                 <button type="button" class="btn btn-danger">Hapus</button>
                                 <button type="button" class="btn btn-info">Edit</button>
