@@ -21,3 +21,6 @@ Route::get('/foto', [UlalaController::class, 'index'])->name('foto');
 
 Route::get('/tambahfoto', [UlalaController::class, 'tambahfoto'])->name('tambahfoto');
 Route::post('/insertfoto', [UlalaController::class, 'insertfoto'])->name('insertfoto');
+
+Route::get('/tampilkandatafoto/{id}', [UlalaController::class, 'tampilkandatafoto'])->name('tampilkandatafoto');
+Route::post('/updatedatafoto/{id}', [UlalaController::class, 'updatedatafoto'])->name('updatedatafoto');
