@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UlalaController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use App\Http\Controllers\UlalaController;
 |
 */
 
+
+
 Route::get('/foto', [UlalaController::class, 'index'])->name('foto');
 
 Route::get('/tambahfoto', [UlalaController::class, 'tambahfoto'])->name('tambahfoto');
@@ -23,3 +26,9 @@ Route::get('/tampilkandatafoto/{id}', [UlalaController::class, 'tampilkandatafot
 Route::post('/updatedatafoto/{id}', [UlalaController::class, 'updatedatafoto'])->name('updatedatafoto');
 
 Route::get('/deletedatafoto/{id}', [UlalaController::class, 'deletedatafoto'])->name('deletedatafoto');
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
+
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');

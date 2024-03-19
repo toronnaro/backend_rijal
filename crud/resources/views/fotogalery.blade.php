@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <li class="nav-item">
+            <a href="login" class="nav-link">log out</a>
+        </li>
+        </ul>
+    </div>
     <h1 class="text-center mb-4">Galery</h1>
 
     <div class="container">
