@@ -29,6 +29,11 @@
                                 <input type="text" name="deskripsi" class="form-control" id="exampleInputEmail1"
                                     aria-describedby="emailHelp" value="{{ $data->deskripsi }}">
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Masukkan Foto</label>
+                                <input type="file" name="foto" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                            </div>
                             <button type="submit" class="btn btn-info">tambah</button>
                         </form>
                     </div>

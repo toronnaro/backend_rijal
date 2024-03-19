@@ -40,7 +40,9 @@
                             <th scope="row">{{ $no++ }}</th>
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->deskripsi }}</td>
-                            <td>bruh</td>
+                            <td>
+                                <img src="{{ asset('fotogalery/' . $row->foto) }}" alt="" style="width:90px">
+                            </td>
                             <td>{{ $row->created_at->format('D M Y') }}</td>
                             <td>
                                 <a href="/deletedatafoto/{{ $row->id }}" class="btn btn-danger">Hapus</a>

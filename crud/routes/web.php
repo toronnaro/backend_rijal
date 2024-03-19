@@ -14,9 +14,6 @@ use App\Http\Controllers\UlalaController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/foto', [UlalaController::class, 'index'])->name('foto');
 
 Route::get('/tambahfoto', [UlalaController::class, 'tambahfoto'])->name('tambahfoto');
