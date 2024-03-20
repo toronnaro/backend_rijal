@@ -20,7 +20,7 @@
         <a href="/tambahfoto" class="btn btn-success mb-4">Tambah +</a>
         <div class="row">
             @foreach ($data as $row)
-                <div class="col-md-4">
+                <div class="col-4">
                     <div class="card" style="width: 18rem;">
                         <img src="{{ asset('fotogalery/' . $row->foto) }}" class="card-img-top" alt=""
                             style="width:287px">
