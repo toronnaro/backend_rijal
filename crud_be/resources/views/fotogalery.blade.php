@@ -20,15 +20,16 @@
         <a href="/tambahfoto" class="btn btn-success mb-4">Tambah +</a>
         <div class="row">
             @foreach ($data as $row)
-                <div class="col-lg-3">
+                <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
                         <img src="{{ asset('fotogalery/' . $row->foto) }}" class="card-img-top" alt=""
-                            style="width:90px">
+                            style="width:287px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $row->judulfoto }}</h5>
                             <td>{{ $row->deskripsifoto }}</td>
                             <td>{{ $row->created_at->format('D M Y') }}</td>
-                            <a href="/deletefoto/{{$row->id}}" class="btn btn-danger">Delete</a>
+                            <br>
+                            <a href="/deletefoto/{{ $row->id }}" class="btn btn-danger">Delete</a>
                             <a href="/tampilfoto/{{ $row->id }}" class="btn btn-primary">edit</a>
                         </div>
                     </div>
